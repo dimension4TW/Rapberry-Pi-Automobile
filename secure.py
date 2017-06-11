@@ -141,12 +141,13 @@ def secure():
                 if measure() < 20:
                     #turn = random.randint(0,1)
                     turn = 1
+                    time.sleep(2)
                     if turn == 0:
                         left(0.5)
                     else:
                         right(0.5)
                 else:
-                    front(0.5)
+                    front(0.1)
                 if temp2=='1':
                     os.kill(pid, signal.SIGKILL)
                     break
@@ -166,13 +167,13 @@ def killing():
             sys.exit(0)
         elif temp == 'w':
             print('fuck')
-            front(0.5)
+            front(0.2)
         elif temp == 'a':
-            left(0.5)
+            left(0.2)
         elif temp == 'd':
-            right(0.5)
+            right(0.2)
         elif temp == 's':
-            rear(0.5)
+            rear(0.2)
         elif temp == 'x':
             stop()
         elif temp == 'k':
